@@ -1,2 +1,2 @@
-<h3>assignment 1</h3>
+<h3>Assignment 1</h3>
 
