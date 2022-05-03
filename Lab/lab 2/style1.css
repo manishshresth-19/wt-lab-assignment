@@ -1,0 +1,96 @@
+footer{
+    display: flex;
+  
+    flex-direction:column;
+    align-items: center;
+}
+b
+{
+    margin: 10px;
+    display: flex;
+
+   
+  
+ 
+  
+}
+.dotted
+{
+    text-decoration: none;
+    border: dotted 2px #000000 ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 55px;
+}
+.dashed
+{
+    text-decoration: none;
+    border: dashed 3px #000000 ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 55px;
+}
+.solid
+{
+    text-decoration: none;
+    border: solid 3px #080808 ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 55px;
+}
+.double
+{
+    text-decoration: none;
+    border: double 3.5px #000;
+    color: #000;
+    margin: 20px;
+    padding: 15px 55px;
+}
+.groove
+{
+    text-decoration: none;
+    border: groove 3px  ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 52px;
+}
+.ridge
+{
+    text-decoration: none;
+    border: ridge 3px ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 61px;
+}
+.inset
+{
+    text-decoration: none;
+    border: inset 3px  ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 59px;
+}
+.outset
+{
+    text-decoration: none;
+    border: outset 3px  ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 59px;
+}
+.none
+{
+    text-decoration: none;
+    border: none 2px ;
+    color: #000;
+    margin: 20px;
+    padding: 15px 60px;
+}
+.hidden
+{
+    text-decoration: none;
+    border: hidden 2px;
+    color: #000;
+    margin: 20px;
+    padding: 15px 60px;
+}
