@@ -1,17 +1,5 @@
-# Tailwind css Color components pallet copy version 
-- [Tailwind css Color components pallet copy version](#tailwind-css-color-components-pallet-copy-version)
-  - [Preview](#preview)
-  - [Description](#description)
-    - [Color](#color)
-      - [syntax](#syntax)
-  - [HSL Value](#hsl-value)
-
-
-## Preview
-
-
-
-## Description
+## screenshot
+![Screenshot 2022-05-12 201615](https://user-images.githubusercontent.com/101724961/168099514-e00bb586-76da-4b80-86e0-fe271233848c.png)
 
 
 ### Color
