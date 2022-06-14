@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javascript Drag and drop</title>
+</head>
+
+<body>
+    <a onclick="reset()" class="reset">Reset</a>
+    <main>
+        <div draggable="true" class="Ringer box absolute top_z" style=" left: 40px; ">Ringer
+        </div>
+        <div draggable="true" class="rose box absolute top_z" style=" left: 300px; ">rose
+        </div>
+        <div draggable="true" class="Ringer box absolute top_z" style=" left: 600px; ">Ringer
+        </div>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            .absolute {
+                position: absolute;
+            }
+            
+            .top_z {
+                top: 25px;
+                z-index: 5;
+            }
+            
+            [draggable] {
+                cursor: move;
+            }
+            
+            .reset {
+                color: #fff;
+                padding: 10px 15px;
+                background-color: blue;
+                border-radius: 25px;
+                position: absolute;
+                right: 0;
+            }
+            
+            .reset:hover {
+                font-size: large;
+            }
+            
+            .box {
+                color: #fff;
+                border-radius: 25px;
+                text-align: center;
+                padding: 18px 32px;
+                background-color: rgb(194, 57, 57);
+                margin-left: 10px;
+            }
+            
+            main {
+                display: flex;
+            }
+        </style>
+        <script>
+            function reset() {
+                location.reload(true);
+            };
+
+            function dragndrop() {
+                // let position_x = '';
+                let position_y = '';
+                let select = '';
+
+
+
+                function drag(e) {
+                    select = e.target;
+                    xpos = e.offsetX === undefined ? e.layerX : e.offsetX;
+                    position_y = e.offsetY === undefined ? e.layerY : e.offsetY;
+                    select.style.zIndex = 100;
+                }
+                document.querySelector('body').addEventListener('dragstart', drag, false);
+
+
+                function move(e) {
+                    console.log(e.preventDefault())
+                    e.preventDefault();
+                }
+                document.querySelector('body').addEventListener('dragover', move, false);
+
+
+                function drop(e) {
+                    e.preventDefault();
+                    select.style.left = e.pageX - xpos + 'px';
+                    select.style.top = e.pageY - position_y + 'px';
+                }
+
+
+                document.querySelector('body').addEventListener('drop', drop, false);
+
+            }
+            dragndrop();
+        </script>
+    </main>
+</body>
+
+</html>
