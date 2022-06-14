@@ -77,8 +77,7 @@ th {
 
 html {
     background-color: #5f45bb;
-    background-image: linear-gradient(to bottom right, #189cac, #d054e4);
-    background-repeat: repeat-x;
+    background-image: linear-gradient(top bottom right, #189cac, #d054e4);
     color: #fff;
     font-family: "Quicksand", sans-serif;
     font-size: 16px;
@@ -111,8 +110,11 @@ a {
 }
 
 .content {
-    display: flex;
     position: relative;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    left: auto;
     min-height: 100vh;
 }
 
@@ -123,11 +125,13 @@ a {
 
 .about {
     max-width: 26rem;
+    position: absolute;
+    top: 16%;
+    left: 17%;
 }
 
 @media screen and (max-width: 799px) {
     .content {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 5rem 3rem;
@@ -141,22 +145,18 @@ a {
 @media screen and (min-width: 800px) {
     .content {
         padding: 4rem;
-        /* justify-content: space-around; */
+        justify-content: space-around;
         justify-content: space-evenly;
         align-items: center;
     }
-    .side {
-        /* flex-grow: 0; */
-        flex-shrink: 0;
-        height: 20rem;
-        margin-left: 4rem;
-        order: 2;
-        width: 20rem;
-    }
-    .about {
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
+}
+
+.side {
+    /* flex-grow: 0; */
+    height: 20rem;
+    margin-left: 4rem;
+    order: 2;
+    width: 20rem;
 }
 
 .wallpaper,
@@ -178,13 +178,15 @@ a {
 .picture-shadow {
     border-radius: 290486px;
     background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+    background-repeat: no-repeat;
     position: absolute;
-    top: 10%;
+    top: 39%;
+    left: 820px;
 }
 
 .picture-image {
     border-radius: 290486px;
-    position: absolute;
+    position: relative;
 }
 
 .name {
@@ -260,11 +262,13 @@ a {
 }
 
 .social {
-    display: flex;
     margin-top: 1.5rem;
+    position: absolute;
+    top: 98%;
+    left: 10%;
 }
 
-.social li {
+.social span {
     height: 2rem;
     margin-right: 0.5rem;
     text-align: center;
@@ -273,7 +277,6 @@ a {
 
 .social a {
     align-items: center;
-    display: flex;
     font-size: 1.5rem;
     height: 2rem;
     justify-content: center;
@@ -291,4 +294,89 @@ a {
 .social a:active {
     opacity: 1;
     transform: scale(1.1);
+}
+
+.picture-image {
+    position: absolute;
+    left: 830px;
+    right: 0;
+    top: 39%;
+    right: 0;
+}
+
+html,
+body,
+p,
+ol,
+section,
+span,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
 }
